@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Gamja Flower", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-user-select: none; /* Safari 및 이전 버전의 Chrome */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer 및 Edge */
+    user-select: none; /* 표준 문법 */
+}
+
+hr {
+    width: 100%; /* 부모 요소의 너비에 맞추기 */
+}
+
+header {
+    background-color: #FFC0CB;
+    width: 100%; /* 화면 전체 너비로 설정 */
+    height: 100%;
+    min-height: 103vh;
+    margin-top: -1.5%;
+}
+
+.headerFooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; /* 원하는 만큼의 여백 설정 */
+}
+
+.mainFrom {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%; /* 원하는 만큼의 여백 설정 */
+}
+
+.mainText > h1 {
+    color: #ffff;
+    text-align: center;
+}
+
+.mainText > h3 {
+    color: #8a8989;
+    text-align: center;
+}
+
+#typewriter-text {
+    display: block; /* 블록 요소로 지정 */
+    overflow: hidden; /* 텍스트가 넘치는 경우 가리기 */
+    white-space: pre-line; /* 텍스트가 여러 줄에 나타나도록 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+    line-height: -200PX; /* 줄 간격 조정 */
+}
+
+#typewriter-text .line::first-letter {
+    text-align: start; /* 첫 번째 글자를 왼쪽으로 정렬 */
+}
+
+.box {
+    margin: 10px;
+    border: 2px solid #FFC0CB;
+    border-radius: 10px;
+    padding: 10px
+}
+
+.boxHeaders > h1, h3 {
+    text-align: center;
+}
+
+.boxHeaders h1 {
+    margin-bottom: 5px; /* h1 아래 간격 조정 */
+}
+
+.boxHeaders h3 {
+    margin-top: 5px; /* h3 위 간격 조정 */
+}
+
+.boxHeaders > h3 {
+    color: #8a8989;
+}
+
+.boxText {
+    text-align: center;
+}
+
+.boxText > span {
+    font-size: 17px;
+}
+
+.footer {
+    background-color: #FFC0CB;
+    width: 100%;
+    height: 10vh;
+    padding: 10px;
+}
+
+.footer > h1 {
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* 시작 시 투명도를 0으로 설정하여 투명한 상태로 시작 */
+    }
+    to {
+        opacity: 1; /* 끝나는 지점에서 투명도를 1로 설정하여 완전히 나타나는 상태로 전환 */
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out; /* fadeIn 애니메이션 적용, 1초 동안 적용되며 ease-in-out으로 애니메이션 부드럽게 전환 */
+}
+
+@keyframes countup {
+    from {
+        content: "0"; /* 시작 시 숫자를 0으로 설정 */
+    }
+    to {
+        content: "100"; /* 끝나는 지점에서 숫자를 지정된 숫자로 설정 */
+    }
+}
+
+.counter {
+    content: "0"; /* 초기에 숫자를 0으로 설정 */
+    animation: countup 1s ease-in-out; /* countup 애니메이션 적용, 5초 동안 적용되며 ease-in-out으로 애니메이션 부드럽게 전환 */
+}
+
+/* 폭죽 애니메이션 스타일 */
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: explode 5s ease-out;
+  }
+
+@keyframes explode {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+.headerFooter {
+    animation: bounce 1s infinite; /* 애니메이션 적용 */
+}
